@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".SearchActvity">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/linear_layout_one">
+
+    <TextView
+        android:id="@+id/textView_diet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_margin="3dp"
+        android:gravity="end"
+        android:text="Diet Restriction"
+         />
+
+    <Spinner
+        android:id="@+id/spinner_diet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_weight="0.5"
+        android:layout_margin="3dp"
+        android:text="Choose your diet!"
+        />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linear_layout_two"
+        android:layout_below="@+id/linear_layout_one">
+    <TextView
+        android:id="@+id/textView_servings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_margin="3dp"
+        android:gravity="end"
+
+        android:text="Serving Restriction"
+        />
+    <Spinner
+        android:id="@+id/spinner_servings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_weight="0.5"
+        android:layout_margin="3dp"
+        android:text="Choose your Servings Size!"
+        />
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linear_layout_three"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linear_layout_two">
+    <TextView
+        android:id="@+id/textView_prep"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:layout_margin="3dp"
+        android:gravity="end"
+        android:text="Preparation Time"
+         />
+    <Spinner
+        android:id="@+id/spinner_prep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_weight="0.5"
+        android:layout_margin="3dp"
+        android:text="Choose your Prep time!"
+
+        />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linear_layout_three"
+         />
+
+</RelativeLayout>

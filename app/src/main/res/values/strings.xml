@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Want to Cook?</string>
+    <string name="button">Start Cooking!</string>
+    <string name="picture_of_food">Picture of Food!</string>
+
+    <string name="cooking_notifications">Cooking Notifications</string>
+    <string name="additional_cooking_notifications">Additional Cooking Notifications</string>
+
+
+    <plurals name="results_label">
+        <item quantity="one">%d result</item>
+        <item quantity="other">%d results</item>
+    </plurals>
+
+    <plurals name="list_item_details">
+        <item quantity="one">%d serving - %s</item>
+        <item quantity="other">%d servings - %s</item>
+    </plurals>
+
+</resources>
