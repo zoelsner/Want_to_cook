@@ -37,9 +37,7 @@ public class SearchActvity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     private void initializeSpinners() {
-        // Initialize Spinner options
 
-        // Diet based on data from database
         this.dietStrings.add("");
         for (Recipe recipe : this.recipes) {
             if (!this.dietStrings.contains(recipe.dietLabel)) {
@@ -67,12 +65,10 @@ public class SearchActvity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     void Search() {
-        // Get the appropriate results based on the selected options
         ArrayList<Recipe> searchResults = new ArrayList<>();
 
         for (Recipe recipe : recipes) {
-            // default: add it to the result list
-            // when it doesn't fit a criteria: don't add it
+
             boolean add = true;
 
             if (this.dietChoice > 0) {
@@ -83,35 +79,32 @@ public class SearchActvity extends AppCompatActivity implements AdapterView.OnIt
             }
 
             if (this.servingChoice > 0) {
-                // Exclude things which don't fit this criteria
+
                 switch (this.servingChoice) {
-                    // less than 4 servings
+
                     case 1:
-                        // if it isn't this, exclude it
+
                         if (recipe.servings >= 4) {
                             add = false;
                         }
                         break;
 
-                    // 4 - 6 servings
                     case 2:
-                        // if it isn't this, exclude it
+
                         if (recipe.servings < 4 || recipe.servings > 6) {
                             add = false;
                         }
                         break;
 
-                    // 7 - 9 servings
                     case 3:
-                        // if it isn't this, exclude it
+
                         if (recipe.servings < 7 || recipe.servings > 9) {
                             add = false;
                         }
                         break;
 
-                    // 10 + servings
                     case 4:
-                        // if it isn't this, exclude it
+
                         if (recipe.servings < 10) {
                             add = false;
                         }
@@ -161,7 +154,7 @@ public class SearchActvity extends AppCompatActivity implements AdapterView.OnIt
                 android.R.layout.simple_spinner_dropdown_item,
                 options
         );
-//        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//
         spinner.setAdapter(spinnerAdapter);
         spinner.setOnItemSelectedListener(this);
     }

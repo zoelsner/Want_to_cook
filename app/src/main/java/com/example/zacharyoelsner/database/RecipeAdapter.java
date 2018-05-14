@@ -17,11 +17,6 @@ import com.squareup.picasso.Picasso;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
-
-// adapter is needed when you want to do any sort of list or table view
-// gets data and decides where to display in the activity
 
 public class RecipeAdapter extends BaseAdapter {
 
@@ -51,21 +46,18 @@ public class RecipeAdapter extends BaseAdapter {
         return mRecipeList.size();
     }
 
-    // returns the item at specific position in the data source
 
     @Override
     public Object getItem(int position){
         return this.mRecipeList.get(position);
     }
 
-    // returns the row id associated with the specific position in the list
     @Override
     public long getItemId(int position){
         return position;
     }
 
 
-    ////GOOD TO HERE ////
 
 
 
@@ -103,7 +95,7 @@ public class RecipeAdapter extends BaseAdapter {
         Button buttonToCook = holder.buttonToCook;
         TextView typeOfFood = holder.typeOfFood;
 
-        // get corresonpinding recipe for each row
+
 
         final Recipe recipe = (Recipe)getItem(position);
 
